@@ -1,9 +1,16 @@
-## variable
-var: dùng js cũ, phạm vi toàn cục, có thể thay đổi giá trị.
-let: dùng js mới, phạm vi block, có thể thay đổi giá trị.
-const: dùng js mới, phạm vi block, không thể thay đổi giá trị. (typrError: assignment to constant variable)
-Hai tên biến là kí tự đặc biệt duy nhất: $ và _
+## Mục đích sử dụng của 3 kiểu khai báo biến
 
+1. **var**:
+    - Sử dụng khi cần khai báo biến có phạm vi toàn cục hoặc phạm vi hàm (nếu khai báo trong hàm thì bên ngoài hàm không truy cập được).
+    - Thích hợp cho các dự án cũ hoặc khi cần hỗ trợ các trình duyệt cũ.
+
+2. **let** (ES6 - ECMAScript 2015):
+    - Sử dụng khi cần khai báo biến có phạm vi block (trong cặp ngoặc nhọn {}).
+    - Thích hợp cho các biến chỉ cần tồn tại trong một khối mã cụ thể, giúp tránh lỗi do phạm vi biến.
+
+3. **const**(ES6 - ECMAScript 2015):
+    - Sử dụng khi cần khai báo hằng số, giá trị không thay đổi sau khi được gán.
+    - Thích hợp cho các giá trị cố định, giúp mã nguồn rõ ràng và dễ hiểu hơn.
 - mang tính chất hoisting (khai báo trước khi sử dụng) nhưng không khởi tạo giá trị (undefined)
 ```javascript
 // tương đương với var a;
