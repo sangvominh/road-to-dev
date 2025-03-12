@@ -1,3 +1,4 @@
+<?php declare(strict_types=1); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +7,12 @@
   <title>php page</title>
 </head>
 <body>
-   <h1>hello world</h1>
-  <h2>
-  <?php
-  echo "hello php version" . phpversion();
-?>
-        hhhee
-    
-  </h2>
+
+<form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
+    <label>Username:</label>
+    <input type="text" name="username">
+    <input type="submit" value="Submit">
+  </form>
+
 </body>
 </html>
