@@ -258,7 +258,7 @@ a {
   color: #000339;
 }
 
-.row {
+.feature .row {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
@@ -312,7 +312,6 @@ a {
   font-size: 2rem;
   line-height: 1.5;
   color: #000339;
-  word-break: break-all;
 }
 
 .feature .item .desc {
@@ -322,6 +321,7 @@ a {
   font-size: 1.4rem;
   line-height: 1.5;
   color: #a3a6ab;
+  word-break: break-all;
 }
 
 .feature .item .info {
@@ -340,4 +340,140 @@ a {
 
 .feature .item .label {
   margin-left: 8px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  letter-spacing: 0.01em;
+  color: #4d4d52;
+}
+
+/*========== Statistic========== */
+.stats .content {
+  width: 1048px;
+}
+.stats {
+  margin-top: 70px;
+  padding: 50px 0;
+}
+
+.stats .row {
+  display: flex;
+}
+
+.stats .block-img,
+.stats .info {
+  width: 50%;
+}
+
+.stats .info {
+  padding: 79px 0 0 165px;
+}
+
+.stats .block-img {
+  position: relative;
+}
+
+.stats .stats-trend {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 239px;
+  padding: 45px 27px 40px;
+  border-radius: 0px 0px 12px 12px;
+  background: #fff;
+}
+
+.stats .stats-trend .value {
+  font-weight: 700;
+  font-size: 2.6rem;
+  letter-spacing: 0.01em;
+  color: #000339;
+}
+
+.stats .stats-trend .desc {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #a7a7a7;
+}
+
+.stats .stats-trend .icon {
+  margin-left: auto;
+}
+
+.stats .stats-trend .separate {
+  height: 1.2px;
+  margin-top: 25px;
+  background: #e9e9e9;
+}
+
+.stats .avt-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 14px;
+  margin-top: 27px;
+}
+
+.stats .avt-group img {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-left: -6px;
+}
+
+.stats .row .block-img .image {
+  display: block;
+  margin-left: auto;
+  width: 400px;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.stats .sub-title {
+  position: relative;
+  width: 269px;
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1.29;
+  color: #000339;
+}
+.stats .sub-title::before {
+  position: absolute;
+  left: 0;
+  top: -10px;
+  content: "";
+  display: block;
+  width: 41px;
+  height: 4px;
+  background: #000339;
+  border-radius: 12px;
+}
+
+.stats .info .desc {
+  width: 309px;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.88;
+  color: #5a6473;
+}
+
+.row-qty {
+  margin-top: 110px;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+
+.stats .qty {
+  font-weight: 600;
+  font-size: 6.4rem;
+  color: #000000;
+}
+
+.stats .qty-desc {
+  margin-top: 24px;
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: #7b8087;
 }
