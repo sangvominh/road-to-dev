@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --font-heading: Sen, sans-serif;
+  --primary-color: #ffb900;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ========== common ========= */
+.content {
+  width: 1170px;
+  /*khi thu nhỏ màn hình vẫn đảm bảo hai bên 24px - không dính sát viền màn hình*/
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0 16px;
+  line-height: 50px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #fff;
+  background: #171100;
+  border-radius: 999px;
+}
+
+.heading {
+  font-family: var(--font-heading), serif;
+  color: #171100;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* ========== header ========== */
+.header {
+  padding: 36px 0 8px;
+  background: #fffcf4;
+}
+
+.fixed {
+  position: sticky;
+  top: -28px;
+  z-index: 1;
+}
+
+.header__body {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav {
+  margin-left: auto;
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav-list .item a {
+  /* làm cho cho after gạch chân*/
+  position: relative;
+  /*dùng padding để tạo khoảng cách với các item khác và tăng vùng bấm */
+  padding: 8px 21px;
+  font-size: 1.6rem;
+  color: rgb(95, 91, 83);
+}
+
+.header__nav .item.active a,
+.header__nav .item:hover a {
+  /*font-weight: 600;*/
+  /*dùng bóng để hover không đẩy các chữ lân cận xê dịch*/
+  text-shadow: 1px 0 0 currentColor;
+  color: #171100;
+}
+
+.header__nav .item.active a::after {
+  content: "";
+  display: block;
+  bottom: 6px;
+  width: 12px;
+  height: 2px;
+  position: absolute;
+  left: 21px;
+  background: #171100;
+  border-radius: 1px;
+}
+
+.header__btn-action {
+  min-width: 144px;
+  margin-left: 49px;
+}
+
+/* ========== hero ==========*/
+.hero {
+  padding: 56px 0 65px;
+  background: #fffcf4;
+}
+
+.hero__body {
+  display: flex;
+}
+
+/* hero left */
+.hero__media-block {
+  position: relative;
+  width: 48%;
+}
+/* img */
+.hero__media-block__img {
+  width: 470px;
+  height: 685px;
+  object-fit: cover;
+  border-radius: 20px;
+  vertical-align: bottom;
+}
+/* summary */
+.hero__media-block__summary {
+  display: flex;
+  gap: 22px;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  bottom: 48px;
+
+  width: 270px;
+  padding: 24px;
+
+  background: #ffffff;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+}
+
+.hero__summary-item {
+  display: flex;
+  align-items: center;
+}
+
+.hero__summary-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.icon-yellow {
+  background: #fff9e8;
+}
+
+.icon-purple {
+  background: #fcefff;
+}
+
+.icon-blue {
+  background: #ebeaff;
+}
+
+.hero__summary-info {
+  margin-left: 16px;
+}
+
+.hero__summary-amount {
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: #5f5b53;
+}
+
+.hero__summary-title {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #171100;
+}
+
+/* hero right */
+.hero__content-block {
+  width: 52%;
+  padding: 64px 0 0 130px;
+}
+
+.hero__content__heading {
+  font-size: 5.8rem;
+  line-height: 1.17;
+}
+
+.hero__content__desc {
+  margin-top: 22px;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #5f5b53;
+}
+
+.hero__content__cta-group {
+  display: flex;
+  align-items: center;
+  margin: 38px 0 48px;
+}
+
+.hero__content__cta-btn {
+  min-width: 180px;
+  line-height: 64px;
+  background-color: var(--primary-color);
+}
+
+.hero__content__cta-video {
+  display: flex;
+  align-items: center;
+  margin-left: 28px;
+  border: none;
+  background: transparent;
+}
+
+.hero__content__cta__icon {
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.07);
+}
+
+.hero__content__cta-video span {
+  margin-left: 14px;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #171100;
+}
+
+.hero__content__statistic {
+  /* -28px để loại bỏ khoảng trống đầu của số 50+ */
+  margin: 8px 0 0 -28px;
+}
+
+.hero__content__statistic strong {
+  /* padding left cho so 70+ */
+  padding: 0 8px 0 28px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 4.4rem;
+  line-height: 1.23;
+  color: #171100;
+}
