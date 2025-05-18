@@ -30,6 +30,7 @@ a {
 
 .btn {
   display: inline-block;
+  min-width: 118px;
   padding: 0 16px;
   line-height: 50px;
   font-weight: 600;
@@ -38,6 +39,11 @@ a {
   color: #fff;
   background: #171100;
   border-radius: 999px;
+  border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
 }
 
 .heading {
@@ -45,6 +51,17 @@ a {
   color: #171100;
   font-weight: 700;
   letter-spacing: -0.02em;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp.line-2 {
+  --line-clamp: 2;
 }
 
 /* ========== header ========== */
@@ -227,6 +244,7 @@ a {
   margin-left: 28px;
   border: none;
   background: transparent;
+  cursor: pointer;
 }
 
 .hero__content__cta__icon {
@@ -264,4 +282,142 @@ a {
   font-size: 4.4rem;
   line-height: 1.23;
   color: #171100;
+}
+
+/* ============= popular ============= */
+.popular {
+  padding: 65px 0;
+  margin-top: 135px;
+}
+
+/* popular top */
+.popular__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popular__top-heading {
+  font-size: 3.8rem;
+  line-height: 1.26;
+}
+
+.popular__top-desc {
+  margin-top: 16px;
+  width: 458px;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #5f5b53;
+}
+
+.popular__top-control {
+  display: flex;
+  gap: 18px;
+}
+
+.popular__top-control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  background: transparent;
+  border-radius: 50%;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.popular__top-control-btn:hover {
+  color: #fff;
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
+/* popular list */
+.course-list {
+  margin-top: 55px;
+  display: flex;
+  gap: 30px;
+}
+
+.course__item {
+  /* đều các item */
+  flex: 1;
+  border-radius: 12px;
+  border: 1px solid #e2dfda;
+  background: #fff;
+}
+
+.course__item--thumb {
+  /* 2px bù cho margin -1 */
+  width: calc(100% + 2px);
+  height: 278px;
+  /* loại bỏ border của item */
+  margin: -1px;
+  object-fit: cover;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.course__item--info {
+  padding: 16px 22px 22px;
+}
+
+.course__item__head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.course__item__head--heading {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 30px;
+}
+.course__item__head__rating {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.course__item__head__title--star {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+}
+
+.course__item__head__title--value {
+  margin-left: 6px;
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+}
+
+.course__item--desc {
+  margin-top: 6px;
+  color: #5f5b53;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+}
+
+.course__item__foot {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.course__item__foot--price {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 3rem;
+}
+
+.course__item__foot--btn:hover {
+  background: var(--primary-color);
 }
