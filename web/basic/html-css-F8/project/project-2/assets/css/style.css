@@ -431,7 +431,18 @@ a {
 
 .feedback-body {
   padding: 96px 0;
+}
+
+.feadback-list {
   display: flex;
+  overflow: hidden;
+}
+
+.feadback-item {
+  display: flex;
+  width: 100%;
+  /* khong cho item co lai, cho no full */
+  flex-shrink: 0;
 }
 
 .feedback__info--avt {
@@ -473,4 +484,295 @@ a {
   font-style: italic;
   font-weight: 400;
   line-height: 4rem;
+}
+
+/* ======== feature ========= */
+.feature {
+  margin-top: 200px;
+}
+
+.feat-body {
+  display: flex;
+  gap: 130px;
+  justify-content: space-between;
+}
+/* feat left right */
+.feat-left {
+  width: 51%;
+}
+
+/* feat img */
+.feat-img {
+  display: flex;
+}
+
+.feat__img {
+  width: 270px;
+  height: 404px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.feat__img-1 {
+  margin-top: 34px;
+}
+
+.feat__img-2 {
+  margin-left: 30px;
+}
+
+.feat__img-3 {
+  width: 470px;
+  height: 440px;
+  border-radius: 20px;
+}
+
+/* feat content */
+.feat-content {
+  padding-top: 58px;
+}
+
+.feat__heading {
+  font-size: 3.8rem;
+  line-height: 4.8rem;
+  letter-spacing: -0.76px;
+}
+
+.feat__desc {
+  margin-top: 16px;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+}
+
+.feat__btn {
+  margin-top: 32px;
+  width: 137px;
+  height: 50px;
+  background: #ffb900;
+}
+
+/* ========= blog ========== */
+.blog {
+  margin-top: 200px;
+  background: #fffcf4;
+}
+
+.blog-body {
+  padding: 96px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* blog top */
+.blog-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.blog-heading {
+  color: #130606;
+  text-align: center;
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 4.8rem;
+  letter-spacing: -0.76px;
+}
+
+.blog-desc {
+  width: 448px;
+  color: #696262;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+}
+
+/* blog list */
+.blog-list {
+  margin-top: 55px;
+  display: flex;
+  flex-shrink: 0;
+  gap: 30px;
+  overflow: hidden;
+  padding-bottom: 38px;
+}
+
+.blog-item {
+  width: 370px;
+  height: 467px;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.blog-item:hover {
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.blog-item-content {
+  padding: 28px 20px;
+}
+
+.blog-item__img {
+  width: 370px;
+  height: 250px;
+  border-radius: 16px 16px 0px 0px;
+  object-fit: cover;
+}
+
+.blog-item__date {
+  position: relative;
+  color: #5f5b53;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 185.714% */
+}
+
+.blog-item__date:after {
+  content: "";
+  width: 160px;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  border-radius: 0.5px;
+  background: #e2dfda;
+}
+
+.blog-item__sub-title {
+  margin-top: 25px;
+  color: #171100;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 175% */
+}
+
+.blog-item__btn {
+  margin-top: 12px;
+}
+
+.blog-item__btn:hover {
+  background: #ffb900;
+}
+
+/* blog redirect */
+.blog-redirect {
+  display: flex;
+  justify-content: center;
+}
+
+/* ========= footer ======= */
+.footer {
+  background: #2e2100;
+}
+
+.footer-body {
+  padding-top: 96px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  /* thanh gach ngang voi copyright */
+  position: relative;
+}
+
+.row::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1170px;
+  height: 0.5px;
+  bottom: -38px;
+  left: 0;
+  background: #59554b;
+}
+
+.footer-social {
+  width: 35%;
+}
+
+.footer-company {
+  width: 21.6%;
+}
+
+.footer-support {
+  width: 22.6%;
+}
+
+.footer-address {
+  width: 22.6%;
+}
+
+.footer-desc {
+  color: #bfbcb2;
+  width: 267px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+  margin: 18px 0;
+}
+
+.footer-title {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.8rem;
+  position: relative;
+}
+
+.footer-title::after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 0.5px;
+  position: absolute;
+  bottom: -14px;
+  left: 0;
+  background: #59554b;
+}
+
+.footer-list {
+  margin-top: 43px;
+}
+
+.footer-item {
+  margin-bottom: 12px;
+}
+
+.footer-item:last-child {
+  margin-bottom: 0;
+}
+
+.footer-item strong {
+  color: #fff;
+}
+
+.footer-link {
+  color: #bfbcb2;
+  font-family: Poppins;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+}
+
+/* copyright */
+
+.copyright {
+  padding: 67px 0 28px;
+}
+
+.copyright-content {
+  color: #807d74;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.6rem;
 }
