@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+
+      td {
+        border: 1px solid black;
+        text-align: center;
+      }
+
+      img {
+        width: 48px;
+        height: 48px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <button onclick="previousMonth()">previous month</button>
+      <button id="currM" onclick="currentMonth()"></button>
+      <button onclick="nextMonth()">next month</button>
+    </div>
+
+    <table class="calendar">
+      <thead>
+        <tr>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <th>Saturday</th>
+          <th>Sunday</th>
+        </tr>
+      </thead>
+      <tbody id="body"></tbody>
+    </table>
+    <script src="calendar.js"></script>
+  </body>
+</html>
