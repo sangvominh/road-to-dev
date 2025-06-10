@@ -1,0 +1,22 @@
+INDEX VERSION 1.134+D:\source\language-foundation\Java\learn\BE_spring\.metadata\.plugins\org.eclipse.jdt.core
+1873652105.index
+2547821600.index
+1166152092.index
+3419146551.index
+569597533.index
+2143814459.index
+3544657266.index
+2718833166.index
+1865797976.index
+537116719.index
+749950908.index
+3660261988.index
+2698807574.index
+3368810202.index
+126395686.index
+3428251493.index
+824351307.index
+1622291292.index
+707336039.index
+329285916.index
+2254970204.index

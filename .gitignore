@@ -45,3 +45,6 @@ coverage/
 # Ignore log files
 logs
 *.log
+
+# ignore folder path
+Java\learn\BE_spring\.metadata

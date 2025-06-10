@@ -1,1 +1,0 @@
-console.log(document.getElementsByTagName("h1")[2].innerText = "Hello World");

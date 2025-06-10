@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+h1, p {
+    /*cách viết ngắn*/
+    background: #ffffff url("/IMG/RW1h5sX_1920x1080.jpg") no-repeat top right;
+    background-color: antiquewhite;
+    /*xác định phạm vi được thiết lập màu nền của phần tử (Áp dụng cho background là màu sắc)*/
+    /*conten box, padding box, border box*/
+    background-clip: border-box;
+    /*dùng cho ảnh*/
+    background-origin: padding-box;
+
+
+    font-family: "Roboto", sans-serif;
+}
+
+#textLoreemmmm {
+    /*hình nào ở trước thì ở trên*/
+    background-image: url("/IMG/RW1h2JP_1920x1080.jpg"), url("/IMG/RW1h5sX_1920x1080.jpg");
+    /*ví dụ về các gradient  https://www.w3schools.com/cssref/playdemo.php?filename=playcss_background-image*/
+    /*kết hợp gradient với hình ảnh*/
+    background-image: linear-gradient(180deg, #00000080, #ffffffad), url("/IMG/RW1hdcy_1920x1080.jpg");
+}
+
+/*
+ background-size: đơn vị, contain, cover
+ background-repeat: repeat, repeat-x, repeat-y, no-repeat
+ background-position: top, bottom, left, right, center, x% y% (ví dụ: 50% 50%) background-position: bottom 30px right 20px;
+ background-attachment: fixed, scroll
+*/
+
+
+/*
+box Model
+border-style: none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset
+padding, padding-top, padding-right, padding-bottom, padding-left: 25px
+margin, margin-top, margin-right, margin-bottom, margin-left: 25px
+height, width, max-height, max-width, min-height, min-width
+*/
+
+/*
+text
+color: red, #ff0000, rgb(255, 0, 0)
+text-align: left, right, center, justify
+text-transform: uppercase, lowercase, capitalize
+text-decoration: none, underline, overline, line-through dấu gạch ngang
+text-indent: 50px thục đầu dòng
+*/
+
+/*
+font
+Phông chữ Serif (có chân) có một nét nhỏ ở các cạnh của mỗi chữ cái.
+Phông chữ Sans-serif (không chân) có đường kẻ rõ ràng (không có nét nhỏ đi kèm).
+Phông chữ Monospace (Đơn cách) - ở đây tất cả các chữ cái có cùng chiều rộng cố định.
+Phông chữ Cursive (Chữ viết ẩu) bắt chước chữ viết tay của con người.
+Phông chữ Fantasy (tưởng tượng) là phông chữ trang trí/vui tươi.
+
+lên google font để chọn font
+nhớ thêm vào thẻ head và gắn font-family
+font-family: "Times New Roman", Times, serif;
+font-style: normal, italic, oblique
+font-weight: normal, bold, bolder, lighter, 100, 200, 300, 400, 500, 600, 700, 800, 900
+font-size: 16px, 1em, 100%, 1.5em
+
+icon: https://fontawesome.com/search?o=r&m=free
+dán link này vào head để sử dụng icon: https://cdnjs.com/libraries/font-awesome
+*/

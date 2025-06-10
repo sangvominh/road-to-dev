@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, JS">
+    <meta name="description" content="free web tutorial">
+    <meta name="author" content="Minh Sang">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>On Tap HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="section">
+    <h1>Đây là thẻ lớn nhất, chỉ nên có 1 thẻ này</h1> <!-- Có tất cả 6 thẻ h1-h6 -->
+    <p>Thẻ p luôn bắt đầu dòng mới</p>
+    <hr> <!-- Thẻ ngang -->
+    <br> <!-- Thẻ xuống dòng -->
+</div>
+
+<div class="section">
+    <h2>Format tag</h2>
+    <!-- Format tag -->
+    <p>
+        <b>Đây là đoạn văn in đậm</b>
+        <i>Đây là đoạn văn in nghiêng</i>
+        <u>Đây là đoạn văn gạch chân</u>
+        <s>Đây là đoạn văn gạch ngang</s>
+        <sup>Đây là đoạn văn trên</sup>
+        <sub>Đây là đoạn văn dưới</sub>
+    </p>
+</div>
+
+<div class="section">
+    <h2>Liên kết</h2>
+    <!-- Liên kết -->
+    <a href="http://localhost" target="_self" title="đến địa chỉ xyz">Đường dẫn siêu VIP</a>
+    <br>
+    <img src="IMG/RW1hapg_1920x1080.jpg" width="300" height="200" alt="Hiển thị chú thích khi ảnh lỗi">
+    <a href="https://dictionary.cambridge.org/vi/plus/">
+        <img src="IMG/RW1h2JP_1920x1080.jpg" width="300" height="200" alt="Logo 28tech">
+    </a>
+</div>
+
+<div class="section">
+    <h2>Video</h2>
+    <!-- Video -->
+    <video width="300" height="200" controls preload="metadata" poster="poster.jpg" loop muted autoplay>
+        <source src="IMG/5309319-hd_1920_1080_25fps.mp4" type="video/mp4">
+        <source src="video.webm" type="video/webm">
+        <source src="video.ogv" type="video/ogg">
+        <!-- Subtitles -->
+        <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+        <track src="subtitles_es.vtt" kind="subtitles" srclang="es" label="Spanish">
+        <!-- Fallback text for browsers that do not support the video tag -->
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<div class="section">
+    <h2>Audio</h2>
+    <!-- Audio -->
+    <audio controls preload="auto" loop muted autoplay>
+        <source src="audio.mp3" type="audio/mpeg">
+        <source src="audio.ogg" type="audio/ogg">
+        <!-- Fallback text for browsers that do not support the audio tag -->
+        Your browser does not support the audio tag.
+    </audio>
+</div>
+
+<div class="section">
+    <h2>Beautiful Table Example</h2>
+    <!-- Bảng -->
+    <table>
+        <thead>
+        <tr>
+            <th>STT</th>
+            <th>Họ và tên</th>
+            <th>Tuổi</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Nguyễn Văn A</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Trần Thị B</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Phạm Văn C</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Lê Thị D</td>
+            <td>22</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="section">
+    <h2>Danh sách UL và OL</h2>
+    <!-- Danh sách UL -->
+    <h3>Danh sách UL (Danh sách không thứ tự)</h3>
+    <ul>
+        <li>Đồ uống:
+            <ul>
+                <li>Trà đá</li>
+                <li>Cà phê</li>
+                <li>Nước cam</li>
+            </ul>
+        </li>
+        <li>Đồ ăn:
+            <ul>
+                <li>Bánh mì</li>
+                <li>Bánh bao</li>
+                <li>Bánh cuốn</li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- Danh sách OL -->
+    <h3>Danh sách OL (Danh sách có thứ tự)</h3>
+    <ol type="1">
+        <li>Công việc:
+            <ol type="A">
+                <li>Đọc sách</li>
+                <li>Viết báo cáo</li>
+                <li>Đi chơi với bạn bè</li>
+            </ol>
+        </li>
+        <li>Hoạt động:
+            <ol type="I">
+                <li>Thư giãn</li>
+                <li>Nghỉ ngơi</li>
+                <li>Làm việc</li>
+            </ol>
+        </li>
+    </ol>
+</div>
+
+<div class="section">
+    <h2>Block Elements</h2>
+    <!-- Block Elements -->
+    <h3>Phân biệt kiểu hiển thị của element: block và inline</h3>
+    <div class="block">Phần tử Block 1</div>
+    <div class="block">Phần tử Block 2</div>
+    <span class="inline">Phần tử Inline 1</span>
+    <span class="inline">Phần tử Inline 2</span>
+
+    <!-- Sử dụng id "header" -->
+    <div id="header">
+        <h1>Header Section</h1>
+        <p>This is a header section with id.</p>
+    </div>
+
+    <!-- Sử dụng class "box" -->
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+</div>
+
+<div class="section">
+    <h2>Iframe Examples</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.210001797121!2d106.71921627480526!3d10.795221889354684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527c2f8f30911%3A0x36ac5073f8c91acd!2sLandmark%2081!5e0!3m2!1svi!2s!4v1720623717035!5m2!1svi!2s"
+            width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ihvJtzbVDIQ?si=XeLbwSbV9xiX-_hF"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p><a href="https://coccoc.com/search" target="web_coc_coc">Tìm kiếm trên Cốc Cốc</a></p>
+</div>
+
+<div class="section">
+    <h2>Semantic HTML5 Elements</h2>
+    <header>
+        <h1>Header Section</h1>
+        <p>Welcome to our website!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <h2>Article Title</h2>
+            <p>This is the main content of the article.</p>
+        </article>
+
+        <aside>
+            <h3>Side Content</h3>
+            <p>Additional information or related content.</p>
+        </aside>
+    </main>
+
+    <section>
+        <h2>Section Title</h2>
+        <p>This is a section within the document.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
+    <figure>
+        <img src="example.jpg" alt="Example Image">
+        <figcaption>Figure Caption: This is an example image.</figcaption>
+    </figure>
+</div>
+
+<div class="section">
+    <h2>Form</h2>
+    <form action="https://www.w3schools.com/action_page.php" method="POST" enctype="multipart/form-data">
+        <label for="username">Ho Va Ten</label> <br>
+        <input type="text" id="username" name="username" placeholder="Tên đăng nhập" required>
+
+        <input type="password" name="password" placeholder="Mật khẩu" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="date" name="birthdate">
+        <input type="number" name="age" min="0" max="120">
+        <input type="file" name="avatar" accept="image/*" multiple>
+        <!--fieldset bọc tất ca nhung gi trong do vao hộp-->
+        <fieldset>
+            <legend>Giới tính:</legend>
+            <input type="radio" name="gender" value="male" id="male">
+            <label for="male">Nam</label>
+            <input type="radio" name="gender" value="female" id="female">
+            <label for="female">Nữ</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Sở thích:</legend>
+            <input type="checkbox" name="hobbies" value="reading" id="reading">
+            <label for="reading">Đọc sách</label>
+            <input type="checkbox" name="hobbies" value="sports" id="sports">
+            <label for="sports">Thể thao</label>
+        </fieldset>
+
+        <select name="country">
+            <option value="">Chọn quốc gia</option>
+            <option value="vn">Việt Nam</option>
+            <option value="us">Hoa Kỳ</option>
+        </select>
+
+        <textarea name="comments" rows="4" cols="50" placeholder="Nhập bình luận"></textarea>
+
+        <input type="submit" value="Gửi">
+        <input type="reset" value="Xóa">
+    </form>
+</div>
+
+<div class="section">
+    <h2>Những tính năng HTML5 có mà HTML trước không có:</h2>
+    <form id="newForm">
+        <input type="date" name="birthdate">
+        <input type="email" name="email" required placeholder="Nhập email">
+        <input type="url" name="website">
+        <input type="number" name="age" min="0" max="120">
+        <input type="range" name="rating" min="1" max="5">
+        <input type="color" name="favorite-color">
+        <input type="text" name="username" required autofocus pattern="[A-Za-z]{3,}"
+               placeholder="Tên đăng nhập (ít nhất 3 chữ cái)">
+    </form>
+
+    <video src="movie.mp4" controls></video>
+    <audio src="audio.mp3" controls></audio>
+
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"/>
+    </svg>
+
+    <form id="validationForm">
+        <input type="email" required>
+        <input type="submit" value="Gửi">
+    </form>
+</div>
+
+<script>
+    // Ví dụ cho Canvas
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.fillStyle = "red";
+    ctx.fillRect(0, 0, 150, 75);
+
+    // Ví dụ cho Local Storage
+    localStorage.setItem("username", "JohnDoe");
+
+    // Ví dụ cho Geolocation
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            console.log("Latitude: " + position.coords.latitude +
+                ", Longitude: " + position.coords.longitude);
+        });
+    }
+
+    // Các ví dụ khác như Web Workers, WebSockets, và Offline Web Applications
+    // sẽ cần nhiều code hơn và có thể cần cấu hình server-side.
+</script>
+</body>
+</html>
