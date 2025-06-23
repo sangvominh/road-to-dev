@@ -1,50 +1,7 @@
-# Ignore the node_modules directory (installed npm packages)
-node_modules/
-
-# Ignore npm and yarn lock files
-package-lock.json
-yarn.lock
-
-# Ignore environment variables files (containing API keys, passwords, etc.)
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Ignore build/output directories
-dist/
-build/
-
-# Ignore npm cache directories
-.npm/
-.npm-cache/
-
-# Ignore debug log files
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Ignore macOS system files
-.DS_Store
-
-# Ignore Windows system files
-Thumbs.db
-
 # Ignore VS Code settings and workspace files
 .vscode/
 .idea/
 *.code-workspace
 
-# Ignore Git merge conflict files
-*.orig
-
-# Ignore test coverage reports (if applicable)
-coverage/
-
-# Ignore log files
-logs
-*.log
-
 # ignore folder path
-Java\learn\BE_spring\.metadata
+Java/learn/BE_spring/.metadata/

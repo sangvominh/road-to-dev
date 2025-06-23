@@ -1,1 +1,3 @@
-console.log(document.getElementsByTagName("h1")[2].innerText = "Hello World");
+let a = document.querySelector('.cha .con + .captain')
+
+console.log(a.textContent)
