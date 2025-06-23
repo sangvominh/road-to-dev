@@ -1,7 +1,86 @@
-# Ignore VS Code settings and workspace files
-.vscode/
-.idea/
+# ======================== Common ========================
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+*.lock
+.env
+.env.*
+
+
+# ======================== Node.js / React ========================
+node_modules/
+dist/
+build/
+.cache/
+.npm/
+*.tsbuildinfo
 *.code-workspace
 
-# ignore folder path
-Java/learn/BE_spring/.metadata/
+
+# ======================== Python ========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+.env/
+.venv/
+venv/
+pip-wheel-metadata/
+.cache/
+.pytest_cache/
+.ipynb_checkpoints/
+
+
+# ======================== Java ========================
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+target/
+out/
+.gradle/
+.build/
+*.log
+.metadata
+
+### IntelliJ IDEA ###
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+
+# ======================== IDE / Editor ========================
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+
+# ======================== OS metadata ========================
+desktop.ini
+.DS_Store
