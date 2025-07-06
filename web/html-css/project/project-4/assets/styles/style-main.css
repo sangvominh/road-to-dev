@@ -43,10 +43,11 @@ img {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 130px;
+  min-width: 130px;
   height: var(--height);
   /* can giua chieu doc */
   line-height: var(--height);
+  font-size: 1.6rem;
   font-weight: 500;
   /* chu co dai thi border van ok */
   border-radius: 99px;
@@ -55,6 +56,7 @@ img {
 .btn--primary {
   background: var(--primary-color);
   color: #fff;
+  border: 1px solid rgba(255, 91, 46, 0.6);
 }
 
 .section-heading {
@@ -578,3 +580,123 @@ img {
   line-height: 1; /* 100% */
 }
 
+/* ============= service ========== */
+.service {
+  margin-top: 190px;
+  padding: 68px 0 100px;
+  background: #fff6ed;
+}
+
+.service__sub-heading {
+  color: #5e6085;
+  text-align: center;
+  font-family: Sora;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1; /* 100% */
+}
+
+.service__heading {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.service__content {
+  margin-top: 71px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 64px;
+}
+
+.service__card {
+  width: 294px;
+  padding: 30px 22px 30px 28px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 188, 122, 0.26);
+  background: #fff;
+}
+
+.service__card + .service__card {
+  margin-top: 24px;
+}
+
+.service__media {
+  position: relative;
+  margin-top: 18px;
+}
+
+.service__img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.service__media::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 20px;
+  left: 20px;
+  bottom: 0;
+  height: 350px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #9df1fb 0%, #73d0db 108.14%);
+}
+
+.service__card__heading {
+  position: relative;
+  padding-left: 12px;
+  color: #000958;
+  font-family: Sora;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1; /* 100% */
+}
+
+.service__card__heading::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  display: inline-block;
+  width: 2px;
+  margin-right: 12px;
+  border-radius: 1px;
+  background: linear-gradient(#ff5b2e 0.39%, #ffa187 100.29%);
+}
+
+.service__card__desc,
+.service__card__more {
+  margin-top: 18px;
+  color: #656689;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.71; /* 171.429% */
+}
+
+.service__card__more {
+  position: relative;
+  display: inline-block;
+  margin-top: 24px;
+  color: #34396a;
+}
+
+.service__card__more::after {
+  content: url(../imgs/service-icon-1.svg);
+  position: absolute;
+  top: 0;
+  right: -18px;
+}
+
+.service__cta-wrapper {
+  margin-top: -17px;
+  display: flex;
+  justify-content: center;
+}
+
+.service__cta-more {
+  --height: 56px;
+  width: 214px;
+  color: #ff5b2e;
+  background: none;
+}
