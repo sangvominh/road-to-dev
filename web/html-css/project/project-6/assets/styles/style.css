@@ -1,0 +1,208 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #080415;
+  --desc-color: #51586a;
+  --background-color: #5d3bee;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.6rem;
+}
+
+/* =========== common =========== */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.heading {
+  color: var(--primary-color);
+  font-size: 5.6rem;
+  font-weight: 500;
+  line-height: 6.6rem; /* 117.857% */
+  letter-spacing: -0.224rem;
+}
+
+.desc {
+  color: var(--desc-color);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem; /* 166.667% */
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 171px;
+  height: 62px;
+  background-color: var(--background-color);
+
+  color: #fdfdfd;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 3rem; /* 166.667% */
+}
+
+/* ============= header ============ */
+.header {
+  padding: 0 135px;
+  background: #fbfaff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__contact {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+/*  */
+.email-heart-img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(93, 59, 238, 0.2);
+  border-radius: 99px;
+}
+
+.email-heart-img {
+  width: 24px;
+  box-shadow: 0 6px 25px rgba(27, 17, 17, 0.2);
+}
+
+.email-text {
+  position: relative;
+  color: var(--primary-color);
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 3rem; /* 136.364% */
+}
+
+.email-text::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+/*  */
+.header__decor-img {
+  width: 100px;
+}
+
+/*  */
+.navbar-list {
+  display: flex;
+  column-gap: 43px;
+}
+
+.navbar-item {
+  color: var(--desc-color);
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+/* ============== hero ============= */
+.hero {
+  background: #fbfaff;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__media {
+  position: relative;
+  margin-left: 100px;
+}
+
+.hero__media__img {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+}
+
+.hero__media__decor {
+  position: absolute;
+  left: -210px;
+  top: -80px;
+}
+
+/* hero content */
+.hero__content__heading {
+  width: 500px;
+  font-size: 8rem;
+  line-height: 7.6rem; /* 95% */
+  letter-spacing: -0.32rem;
+}
+
+.hero__content__desc {
+  margin-top: 20px;
+  width: 370px;
+}
+
+.cta-wrapper {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  margin-top: 104px;
+}
+
+.hero__social__title {
+  margin-right: 15px;
+}
+
+.social__icon-wrapper {
+  display: flex;
+  column-gap: 20px;
+}
+
+.social__icon-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(8, 4, 21, 0.1);
+  border-radius: 50%;
+}
+
+.hero__decor--small {
+  position: absolute;
+bottom: -65px;
+    right: -35px;
+  width: 340px;
+  height: 252px;
+}
+
+.hero__decor-img {
+  width: inherit;
+}
