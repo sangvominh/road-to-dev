@@ -333,6 +333,7 @@ a {
 }
 
 .project__item {
+  overflow: hidden;
   background: #fbfaff;
   padding: 24px 24px 24px 34px;
   display: flex;
