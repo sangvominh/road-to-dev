@@ -20,6 +20,17 @@
     display: none;
   }
 
+  /* header bottom */
+
+  .header__contact {
+    display: none;
+  }
+
+  .header__inner {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
   .header-small {
     position: relative;
     display: flex;
@@ -149,6 +160,11 @@
 
   .design__statistic__number::after {
     bottom: 3px;
+  }
+
+  /* ========== atmos =========== */
+  .atmos--hidden {
+    display: none;
   }
 }
 

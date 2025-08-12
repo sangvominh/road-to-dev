@@ -145,29 +145,38 @@
     </header>
     <!-- header large screen-->
     <header class="header">
-      <div class="header__contact">
-        <div class="email-heart-img-wrapper">
+      <div class="container">
+        <div class="header__inner" data-aos="fade-down">
+          <div class="header__contact">
+            <div class="email-heart-img-wrapper">
+              <img
+                src="assets/imgs/header-letterHeart.png"
+                alt=""
+                class="email-heart-img"
+              />
+            </div>
+            <div class="email-text">
+              <a href="#!">hi@arif.interactive</a>
+            </div>
+          </div>
           <img
-            src="assets/imgs/header-letterHeart.png"
+            src="assets/imgs/header-face.png"
             alt=""
-            class="email-heart-img"
+            class="header__decor-img"
           />
-        </div>
-        <div class="email-text">
-          <a href="#!">hi@arif.interactive</a>
+          <nav class="navbar">
+            <ul class="navbar-list">
+              <li class="navbar-item">Projects</li>
+              <li class="navbar-item">Journey</li>
+              <li class="navbar-item">Service</li>
+              <li class="navbar-item">Contact</li>
+            </ul>
+          </nav>
         </div>
       </div>
-      <img src="assets/imgs/header-face.png" alt="" class="header__decor-img" />
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li class="navbar-item">Projects</li>
-          <li class="navbar-item">Journey</li>
-          <li class="navbar-item">Service</li>
-          <li class="navbar-item">Contact</li>
-        </ul>
-      </nav>
     </header>
-    <main style="height: 10000px">
+    <!-- main -->
+    <main>
       <!-- hero -->
       <section class="hero">
         <div class="container">
@@ -245,8 +254,8 @@
         <div class="container">
           <!-- client -->
           <div class="client">
-            <span class="client__title">Meet my recent clients</span>
-            <ul class="client__list">
+            <span class="client__title" data-aos="fade-right">Meet my recent clients</span>
+            <ul class="client__list" data-aos="fade-left">
               <li class="client__item">
                 <img
                   src="assets/imgs/client-google.svg"
@@ -341,7 +350,7 @@
             <!-- special list -->
             <div class="special__list">
               <div class="row row-cols-lg-3 row-cols-1">
-                <div class="col">
+                <div class="col" data-aos="zoom-in">
                   <div class="special__item">
                     <div class="special__item__icon-wrapper">
                       <img
@@ -357,7 +366,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col" data-aos="zoom-in">
                   <div class="special__item special__item--hidden">
                     <div class="special__item__icon-wrapper">
                       <img
@@ -373,7 +382,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col" data-aos="zoom-in">
                   <div class="special__item special__item--hidden">
                     <div class="special__item__icon-wrapper">
                       <img
@@ -419,7 +428,7 @@
           </div>
           <!-- list row -->
           <div class="project__bottom row row-cols-lg-2 row-cols-1">
-            <div class="col">
+            <div class="col" data-aos="zoom-in-down">
               <div class="project__item">
                 <div class="project__item__content">
                   <h3 class="project__item__heading heading">Wally Website</h3>
@@ -442,7 +451,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col" data-aos="zoom-in-down">
               <div class="project__item">
                 <div class="project__item__content">
                   <h3 class="project__item__heading heading">Wally Website</h3>
@@ -465,7 +474,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col" data-aos="zoom-in-right">
               <div class="project__item">
                 <div class="project__item__content">
                   <h3 class="project__item__heading heading">Wally Website</h3>
@@ -488,7 +497,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col" data-aos="zoom-in-left">
               <div class="project__item">
                 <div class="project__item__content">
                   <h3 class="project__item__heading heading">Wally Website</h3>
@@ -606,7 +615,231 @@
           </div>
         </div>
       </section>
+      <!-- question -->
+      <section class="question">
+        <div class="container">
+          <div class="question__inner">
+            <!-- top -->
+            <h2 class="question__heading heading">
+              A few questions clients normally ask me
+            </h2>
+            <!-- list -->
+            <div class="question__list">
+              <!-- item question 1 -->
+              <div class="question__item">
+                <input
+                  type="checkbox"
+                  name=""
+                  id="question-checkbox-1"
+                  class="question__item__checkbox-input"
+                  hidden
+                />
+                <!-- item content -->
+                <div class="question__item__content">
+                  <h3 class="question__item__heading">
+                    What is your hourly rate?
+                  </h3>
+                  <p class="question__item__answer desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                    urna, non nisl tincidunt ut elementum turpis.
+                  </p>
+                </div>
+                <label
+                  for="question-checkbox-1"
+                  class="question__item__checkbox-label"
+                  ><img src="assets/imgs/right.svg" alt=""
+                /></label>
+              </div>
+              <!-- item 2 -->
+              <div class="question__item">
+                <input
+                  type="checkbox"
+                  name=""
+                  id="question-checkbox-2"
+                  class="question__item__checkbox-input"
+                  hidden
+                />
+                <!-- item content -->
+                <div class="question__item__content">
+                  <h3 class="question__item__heading">
+                    What type of projects do you take on?
+                  </h3>
+                  <p class="question__item__answer desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                    urna, non nisl tincidunt ut elementum turpis.
+                  </p>
+                </div>
+                <label
+                  for="question-checkbox-2"
+                  class="question__item__checkbox-label"
+                  ><img src="assets/imgs/right.svg" alt=""
+                /></label>
+              </div>
+              <div class="question__item">
+                <input
+                  type="checkbox"
+                  name=""
+                  id="question-checkbox-3"
+                  class="question__item__checkbox-input"
+                  hidden
+                />
+                <!-- item content -->
+                <div class="question__item__content">
+                  <h3 class="question__item__heading">
+                    How do you charge for projects ?
+                  </h3>
+                  <p class="question__item__answer desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                    urna, non nisl tincidunt ut elementum turpis.
+                  </p>
+                </div>
+                <label
+                  for="question-checkbox-3"
+                  class="question__item__checkbox-label"
+                  ><img src="assets/imgs/right.svg" alt=""
+                /></label>
+              </div>
+              <div class="question__item">
+                <input
+                  type="checkbox"
+                  name=""
+                  id="question-checkbox-4"
+                  class="question__item__checkbox-input"
+                  hidden
+                />
+                <!-- item content -->
+                <div class="question__item__content">
+                  <h3 class="question__item__heading">
+                    What time-zone do you work in?
+                  </h3>
+                  <p class="question__item__answer desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                    urna, non nisl tincidunt ut elementum turpis.
+                  </p>
+                </div>
+                <label
+                  for="question-checkbox-4"
+                  class="question__item__checkbox-label"
+                  ><img src="assets/imgs/right.svg" alt=""
+                /></label>
+              </div>
+              <div class="question__item">
+                <input
+                  type="checkbox"
+                  name=""
+                  id="question-checkbox-5"
+                  class="question__item__checkbox-input"
+                  hidden
+                />
+                <!-- item content -->
+                <div class="question__item__content">
+                  <h3 class="question__item__heading">
+                    How often can we communicate?
+                  </h3>
+                  <p class="question__item__answer desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                    urna, non nisl tincidunt ut elementum turpis. dolor sit
+                    amet, consectetur adipiscing elit. In urna, non nisl
+                    tincidunt. dolor sit amet, consectetur adipiscing elit. In
+                    urna, non nisl tincidunt
+                  </p>
+                </div>
+                <label
+                  for="question-checkbox-5"
+                  class="question__item__checkbox-label"
+                  ><img src="assets/imgs/right.svg" alt=""
+                /></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- atmos -->
+      <section class="atmos">
+        <div class="container">
+          <div class="atmos__top">
+            <h3 class="atmos__heading heading">My atmosphere</h3>
+            <p class="atmos__desc desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna,
+              non nisl tincidunt ut elementum turpis.
+            </p>
+            <p class="atmos__decor">@interaction_arif</p>
+          </div>
+          <div class="row row-cols-lg-3 row-cols-1 atmos__bottom">
+            <div class="cols">
+              <img src="assets/imgs/atmos-1.png" alt="" class="atmos__img" />
+            </div>
+            <div class="cols atmos--hidden">
+              <img src="assets/imgs/atmos-2.png" alt="" class="atmos__img" />
+            </div>
+            <div class="cols atmos--hidden">
+              <img src="assets/imgs/atmos-3.png" alt="" class="atmos__img" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- talk -->
+      <section class="talk">
+        <div class="container">
+          <div class="talk__inner">
+            <img src="assets/imgs/talk.png" alt="" class="talk__decor" />
+            <h2 class="talk__heading heading">Got a project? Let's talk</h2>
+            <p class="talk__desc desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna,
+              non nisl tincidunt ut elementum turpis.
+            </p>
+            <a href="" class="btn talk__btn">Book a Call</a>
+          </div>
+        </div>
+      </section>
     </main>
+    <!-- header-bottom -->
+    <header class="header__bottom">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__contact">
+            <div class="email-heart-img-wrapper">
+              <img
+                src="assets/imgs/header-letterHeart.png"
+                alt=""
+                class="email-heart-img"
+              />
+            </div>
+            <div class="email-text">
+              <a href="#!">hi@arif.interactive</a>
+            </div>
+          </div>
+          <img
+            src="assets/imgs/header-face.png"
+            alt=""
+            class="header__decor-img"
+          />
+          <nav class="navbar">
+            <ul class="navbar-list">
+              <li class="navbar-item">Projects</li>
+              <li class="navbar-item">Journey</li>
+              <li class="navbar-item">Service</li>
+              <li class="navbar-item">Contact</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <p class="footer__rights desc">
+            ©interactiveArif 2021. All rights reserved.
+          </p>
+          <div class="footer__policy">
+            <div class="footer__policy__left desc">Privacy Policy</div>
+            <div class="footer__policy__right desc">Terms of Conditions</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
