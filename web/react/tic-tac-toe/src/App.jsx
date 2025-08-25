@@ -28,16 +28,12 @@ function calculateWinner(squares) {
   return null;
 }
 
-export default function Board() {
-  const [squares, setSquares] = useState(Array(9).fill(null));
-  const [XIsNext, setXIsNext] = useState(true);
-
-  function handleClick(index) {
-    if (squares[index] || calculateWinner(squares)) return;
-    const updateSquare = squares.slice();
-    XIsNext ? (updateSquare[index] = "X") : (updateSquare[index] = "O");
-    setSquares(updateSquare);
-    setXIsNext(!XIsNext);
+function Board({ XIsNext, squares, onplay }) {
+  function handleClick(i) {
+    if (squares[i] || calculateWinner(squares)) return;
+    const updateSquares = squares.slice();
+    XIsNext ? (updateSquares[i] = "X") : (updateSquares[i] = "O");
+    onplay(updateSquares);
   }
 
   const winner = calculateWinner(squares);
@@ -64,5 +60,44 @@ export default function Board() {
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
     </>
+  );
+}
+
+export default function Game() {
+  const [history, setHistory] = useState([Array(9).fill(null)]);
+  const [currentMoves, setCurrentMoves] = useState(0);
+  const xIsNext = currentMoves % 2 === 0;
+  const currentSquares = history[currentMoves];
+
+  function jumTo(nextMove) {
+    setCurrentMoves(nextMove);
+  }
+
+  const moves = history.map((squares, move) => {
+    let desc;
+    if (move > 0) desc = "move #" + move;
+    else desc = "game start";
+    return (
+      <li key={move}>
+        <button onClick={() => jumTo(move)}>{desc}</button>
+      </li>
+    );
+  });
+
+  function handlePlay(updateSquares) {
+    const nextHistory = [...history.slice(0, currentMoves + 1), updateSquares];
+    setHistory(nextHistory);
+    setCurrentMoves(nextHistory.length - 1);
+  }
+
+  return (
+    <div className="game">
+      <div className="game-board">
+        <Board XIsNext={xIsNext} squares={currentSquares} onplay={handlePlay} />
+      </div>
+      <div className="game-info">
+        <ol>{moves}</ol>
+      </div>
+    </div>
   );
 }
