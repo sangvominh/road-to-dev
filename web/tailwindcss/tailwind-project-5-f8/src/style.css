@@ -1,11 +1,6 @@
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss";
 
-@layer components {
-  .button-primary {
-    @apply min-w-[110px] rounded-md bg-[#212832] px-7.5 py-3.75 whitespace-nowrap text-white;
-  }
-}
 @layer base {
   body {
     font-family: "Open Sans", sans-serif;
