@@ -1,0 +1,14 @@
+html.dark {
+  --text-color: #1a162e;
+  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(9%) hue-rotate(253deg) brightness(104%) contrast(104%);
+  // logo
+  --logo-name-color: #fff;
+  // nav
+  --nav-link-color: #fff;
+  // header-action
+  --header-bg-color: #171c28;
+  --header-action-group-bg-color: #292e39;
+  --header-action-separate-color: #ededf6;
+  --header-action-title-color: #fff;
+  --header-action-group-shadow-color: rgba(0, 0, 0, 0.2);
+}
