@@ -88,6 +88,10 @@
 
   /* update */
   .update__inner {
-    padding: 0;
+    padding: 50px 0;
+  }
+
+  .update__bottom {
+    margin-top: 38px;
   }
 }
