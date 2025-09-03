@@ -1,37 +1,21 @@
+@use "../abstracts";
+
 html {
   --text-color: #1a162e;
   --icon-color: brightness(0) saturate(100%) invert(8%) sepia(7%)
     saturate(6618%) hue-rotate(214deg) brightness(96%) contrast(95%);
+  // header
+  @include abstracts.breakpoint(xl) {
+    --header-bg-color: #fff;
+  }
+  --header-bg-color: #eee;
   // logo
   --logo-name-color: #1a162e;
   // nav
   --nav-link-color: #1a162e;
   // header-action
-  --header-bg-color: #eee;
   --header-action-group-bg-color: #fff;
   --header-action-separate-color: #ededf6;
   --header-action-title-color: #1a162e;
   --header-action-group-shadow-color: rgba(237, 237, 246, 0.2);
-
-  --color-primary-red: #f94545;
-  --color-primary-green: #67b044;
-  --color-primary-blue: #0071dc;
-  --color-primary-purple: #7644e1;
-  --color-primary-yellow: #ffb700;
-  --color-primary-dark: #1a162e;
-  --color-primary-cyan: #77dae6;
-
-  --color-bg-light-1: #f8f8fb;
-  --color-bg-light-2: #fafafd;
-  --color-bg-light-3: #eee;
-  --color-bg-white: #fff;
-
-  --color-text-dark-1: #1a162e;
-  --color-text-dark-2: #9e9da8;
-  --color-text-dark-3: #d2d1d6;
-  --color-text-grey-1: #ededf6;
-  --color-text-grey-2: #f8f8fb;
-  --color-text-grey-3: #171c28;
-  --color-text-grey-4: #292e39;
-  --color-text-grey-5: #b9babe;
 }
