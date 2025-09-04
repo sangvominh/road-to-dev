@@ -1,0 +1,157 @@
+.dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  padding-top: 54px;
+  width: min(1240px, 100%);
+
+  &__inner {
+    position: relative;
+    padding: 30px;
+    border-radius: 20px;
+    background: var(--dropdown-bg-color);
+    box-shadow: 0 40px 90px 20px var(--dropdown-box-shadow-color);
+
+    &:before {
+      content: url(../icons/dropdown.svg);
+      filter: var(--dropdown-icon-filter);
+      position: absolute;
+      top: -12px;
+      // script variable
+      left: var(--arrow-left-pos);
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.dropdown__menu {
+  padding-left: 50px;
+  width: 292px;
+  border-right: 1px solid var(--dropdown-menu-border-right-color);
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    // menu media
+    &__media {
+      position: relative;
+      margin-left: -50px;
+
+      &__img-bg {
+        width: 30px;
+        height: 30px;
+      }
+
+      &__img-icon {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &__text {
+      color: var(--dropdown-menu-title-text-color);
+      /* Medium 16 */
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 150%; /* 150% */
+    }
+  }
+
+  // menu list
+  &__list-wrapper {
+    margin-top: 20px;
+    // 100vh - header(110 + dropdownIcon(24*2)) - paddingInner(30*2) - menuTitle(31+marginTopMenulist(20))
+    max-height: min(582px, 100vh - 209px - 30px * 2);
+    overflow-y: auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    &__item__link {
+      color: var(--dropdown-menu-item-link-color);
+      /* Regular 14 */
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 142.857%; /* 142.857% */
+
+      &:hover {
+        color: #0071dc;
+        /* Medium 14 */
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%; /* 142.857% */
+      }
+    }
+
+    &__item--active .dropdown__submenu-wrapper,
+    &__item &__item__link {
+      display: flex;
+    }
+  }
+}
+
+.dropdown__submenu {
+  padding: 0 30px 0 50px;
+
+  &-wrapper {
+    display: none;
+    justify-content: space-between;
+    overflow-y: auto;
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    left: calc(292px + 30px);
+    height: calc(100% - 60px);
+    width: calc(100% - 292px - 30px * 2);
+    padding: 0 30px;
+  }
+
+  &__list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  ~ .dropdown__submenu {
+    margin-top: 36px;
+  }
+}
+
+.dropdown__menu__small {
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    overflow-y: auto;
+    height: calc(100vh - 158px - 30px * 2);
+  }
+}
+
+/* toàn bộ thanh cuộn */
+// co cai nay moi chinh duoc mau o phan khac
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* phần track (nền) */
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-dark-bg);
+}
+
+/* phần thumb (nút kéo) */
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-dark-thumb-bg);
+  border-radius: 5px;
+}
+
+/* hover vào thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-dark-thumb-hover-bg);
+}

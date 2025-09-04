@@ -13,4 +13,15 @@ html.dark {
   --header-action-separate-color: #ededf6;
   --header-action-title-color: #fff;
   --header-action-group-shadow-color: rgba(0, 0, 0, 0.2);
+  // dropdown
+  --dropdown-bg-color: #292e39;
+  --dropdown-box-shadow-color: rgba(23, 28, 40, 0.4);
+  --dropdown-icon-filter: brightness(0) saturate(100%) invert(12%) sepia(3%)
+    saturate(4904%) hue-rotate(184deg) brightness(94%) contrast(83%);
+  --dropdown-menu-border-right-color: #171C28;
+  --dropdown-menu-title-text-color: #b9babe;
+  --dropdown-menu-item-link-color: #b9babe;
+  --scrollbar-dark-bg: #292E39;
+  --scrollbar-dark-thumb-bg: #888;
+  --scrollbar-dark-thumb-hover-bg: #555;
 }

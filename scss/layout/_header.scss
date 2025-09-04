@@ -11,6 +11,7 @@
 
 .header__inner {
   @extend %flexCenterItems;
+  position: relative;
   padding: 30px 0;
   @include abstracts.breakpoint(xl) {
     display: flex;
@@ -30,10 +31,13 @@
   @include abstracts.breakpoint(xl) {
     display: none;
   }
-  
+
+  &__item ~ &__item {
+    padding-left: 30px;
+  }
+
   &__list {
     @extend %flexCenterItems;
-    gap: 30px;
     margin-left: 144px;
     @include abstracts.breakpoint(xxl) {
       margin-left: 50px;
@@ -43,9 +47,16 @@
     }
   }
 
+  &__item {
+    &:hover .dropdown {
+      display: block;
+    }
+  }
+
   &__link {
-    display: flex;
+    @extend %flexCenterItems;
     gap: 6px;
+    height: 50px;
     color: var(--nav-link-color, #1a162e);
     /* Medium 15 */
     font-size: 1.5rem;
