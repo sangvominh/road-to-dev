@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .dropdown {
   display: none;
   position: absolute;
@@ -5,12 +7,26 @@
   padding-top: 54px;
   width: min(1240px, 100%);
 
+  // reset for mobile
+  @include abstracts.breakpoint(lg) {
+    // display: block;
+    position: initial;
+    padding-top: 0;
+  }
+
   &__inner {
     position: relative;
     padding: 30px;
     border-radius: 20px;
     background: var(--dropdown-bg-color);
     box-shadow: 0 40px 90px 20px var(--dropdown-box-shadow-color);
+
+    @include abstracts.breakpoint(lg) {
+      padding: 0;
+      background: transparent;
+      border-radius: 0;
+      box-shadow: none;
+    }
 
     &:before {
       content: url(../icons/dropdown.svg);
@@ -20,6 +36,10 @@
       // script variable
       left: var(--arrow-left-pos);
       transform: translateX(-50%);
+
+      @include abstracts.breakpoint(lg) {
+        content: none;
+      }
     }
   }
 }
@@ -29,11 +49,23 @@
   width: 292px;
   border-right: 1px solid var(--dropdown-menu-border-right-color);
 
+  @include abstracts.breakpoint(lg) {
+    padding: 0;
+    border: none;
+    width: initial;
+  }
+
   &__title {
     display: flex;
     align-items: center;
     gap: 22px;
-    // menu media
+
+    &.dropdown__menu-title-large {
+      @include abstracts.breakpoint(lg) {
+        display: none;
+      }
+    }
+
     &__media {
       position: relative;
       margin-left: -50px;
@@ -49,6 +81,15 @@
         left: 15px;
         width: 18px;
         height: 18px;
+      }
+
+      @include abstracts.breakpoint(xl) {
+        display: none;
+      }
+
+      @include abstracts.breakpoint(lg) {
+        display: block;
+        margin-left: 0;
       }
     }
 
@@ -67,6 +108,10 @@
     // 100vh - header(110 + dropdownIcon(24*2)) - paddingInner(30*2) - menuTitle(31+marginTopMenulist(20))
     max-height: min(582px, 100vh - 209px - 30px * 2);
     overflow-y: auto;
+
+    @include abstracts.breakpoint(lg) {
+      max-height: none;
+    }
   }
 
   &__list {
@@ -99,6 +144,9 @@
 
 .dropdown__submenu {
   padding: 0 30px 0 50px;
+  @include abstracts.breakpoint(xl) {
+    padding: 0;
+  }
 
   &-wrapper {
     display: none;
@@ -111,6 +159,13 @@
     height: calc(100% - 60px);
     width: calc(100% - 292px - 30px * 2);
     padding: 0 30px;
+
+    @include abstracts.breakpoint(lg) {
+      flex-direction: column;
+      position: initial;
+      width: initial;
+      padding: 0;
+    }
   }
 
   &__list {
@@ -118,11 +173,20 @@
     display: flex;
     flex-direction: column;
     gap: 14px;
+
+    @include abstracts.breakpoint(lg) {
+      padding-left: 50px;
+    }
   }
 
   ~ .dropdown__submenu {
     margin-top: 36px;
   }
+  
+  @include abstracts.breakpoint(lg) {
+    margin-top: 20px;
+  }
+
 }
 
 .dropdown__menu__small {
@@ -131,27 +195,10 @@
     justify-content: space-between;
     overflow-y: auto;
     height: calc(100vh - 158px - 30px * 2);
+
+    @include abstracts.breakpoint(lg) {
+      flex-direction: column;
+      height: 100%;
+    }
   }
-}
-
-/* toàn bộ thanh cuộn */
-// co cai nay moi chinh duoc mau o phan khac
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* phần track (nền) */
-::-webkit-scrollbar-track {
-  background: var(--scrollbar-dark-bg);
-}
-
-/* phần thumb (nút kéo) */
-::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-dark-thumb-bg);
-  border-radius: 5px;
-}
-
-/* hover vào thumb */
-::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-dark-thumb-hover-bg);
 }
