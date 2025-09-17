@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
   <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grocery Ecommerce</title>
     <!-- Favicon -->
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="./assets/Gordita-font/stylesheet.css" />
     <!-- Reuse Header and Footer -->
     <script src="scripts/reuseHeaderFooter.js"></script>
-    <!-- Styles --> 
+    <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
@@ -32,8 +32,27 @@
       load("#header", "./templates/header.html");
     </script>
     <div class="container">
-      main content
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, repellendus. Dolores distinctio eveniet aut quia veritatis, nobis, quasi voluptates eius harum ipsum consequuntur sint quos eligendi odit ut sapiente voluptate!
+      <div class="slideshow">
+        <div class="slideshow__inner">
+          <div class="slideshow__item">
+            <a href="#!">
+              <picture>
+                <source media="(max-width: 767.98px)" srcset="./assets/imgs/slideshow/slideshow-1-md.png"/>
+                <img
+                  src="./assets/imgs/slideshow/slideshow-1.png"
+                  alt=""
+                  class="slideshow__img"
+                />
+              </picture>
+            </a>
+          </div>
+        </div>
+        <div class="slideshow__decor">
+          <span class="slideshow__decor__num">1</span>
+          <span class="slideshow__decor__bar"></span>
+          <span class="slideshow__decor__num">5</span>
+        </div>
+      </div>
     </div>
   </body>
 </html>

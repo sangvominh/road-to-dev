@@ -12,6 +12,7 @@
 .header__inner {
   @extend %flexCenterItems;
   position: relative;
+  z-index: 1;
   padding: 30px 0;
 
   @include abstracts.breakpoint(xl) {

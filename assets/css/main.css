@@ -65,7 +65,8 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Gordita", sans-serif;
-  color: var(--color-primary-dark, #1a162e);
+  color: var(--text-color);
+  background: var(--body-bg);
 }
 
 button,
@@ -1215,6 +1216,7 @@ button {
 }
 html {
   --text-color: #1a162e;
+  --body-bg: #f6f6f6;
   --icon-color: brightness(0) saturate(100%) invert(8%) sepia(7%)
     saturate(6618%) hue-rotate(214deg) brightness(96%) contrast(95%);
   --header-bg-color: #eee;
@@ -1234,7 +1236,8 @@ html {
 }
 
 html.dark {
-  --text-color: #1a162e;
+  --text-color: #fff;
+  --body-bg: #292e39;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(9%)
     hue-rotate(253deg) brightness(104%) contrast(104%);
   --header-bg-color: #171c28;
@@ -1255,7 +1258,7 @@ html.dark {
   --scrollbar-dark-thumb-bg: #888;
   --scrollbar-dark-thumb-hover-bg: #555;
   --nav-mobile-bg-color: #292e39;
-  --nav-mobile-action-color: #B9BABE;
+  --nav-mobile-action-color: #b9babe;
 }
 
 .header__action__item, .header__action__item--single, .header__action__group, .nav__link, .nav__list, .header__inner {
@@ -1269,6 +1272,7 @@ html.dark {
 
 .header__inner {
   position: relative;
+  z-index: 1;
   padding: 30px 0;
 }
 @media (max-width: 1199.98px) {
@@ -1671,6 +1675,72 @@ html.dark {
     flex-direction: column;
     height: 100%;
   }
+}
+
+.slideshow {
+  margin-top: 40px;
+  position: relative;
+}
+.slideshow__inner {
+  display: flex;
+  overflow: hidden;
+}
+.slideshow__item {
+  position: relative;
+  width: 100%;
+  flex-shrink: 0;
+  padding-top: 34%;
+}
+@media (max-width: 767.98px) {
+  .slideshow__item {
+    padding-top: 50%;
+  }
+}
+.slideshow__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.slideshow__decor {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  position: absolute;
+  left: 5%;
+  bottom: 14%;
+  width: 16%;
+}
+.slideshow__decor__bar {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  flex-shrink: 0;
+  background-color: #fff;
+}
+.slideshow__decor__bar::before, .slideshow__decor__bar::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  left: -10px;
+  width: 14px;
+  height: 14px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+}
+.slideshow__decor__bar::after {
+  right: -10px;
+  left: initial;
+}
+.slideshow__decor__num {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%; /* 144.444% */
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -11,7 +11,8 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Gordita", sans-serif;
-  color: var(--color-primary-dark, #1a162e);
+  color: var(--text-color);
+  background: var(--body-bg);
 }
 
 button,

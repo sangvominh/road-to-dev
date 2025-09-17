@@ -1,5 +1,6 @@
 html.dark {
-  --text-color: #1a162e;
+  --text-color: #fff;
+  --body-bg: #292e39;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(9%)
     hue-rotate(253deg) brightness(104%) contrast(104%);
   // header
@@ -26,5 +27,5 @@ html.dark {
   --scrollbar-dark-thumb-hover-bg: #555;
   // nav mobile
   --nav-mobile-bg-color: #292e39;
-  --nav-mobile-action-color: #B9BABE;
+  --nav-mobile-action-color: #b9babe;
 }
