@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 html.dark {
   --text-color: #fff;
   --body-bg: #292e39;
@@ -28,4 +30,11 @@ html.dark {
   // nav mobile
   --nav-mobile-bg-color: #292e39;
   --nav-mobile-action-color: #b9babe;
+  // card item
+  --card-item-bg-color: #171c28;
+  --card-item-bg-thumb: #292e39;
+  .card__item__thumb {
+    filter: none;
+  }
+  
 }

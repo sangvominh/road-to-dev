@@ -1,0 +1,78 @@
+@use "../abstracts";
+
+.card__item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-radius: 16px;
+  background: var(--card-item-bg-color);
+  padding: 10px;
+
+  @include abstracts.screen(xl) {
+    flex-direction: column;
+  }
+
+  @include abstracts.screen(md) {
+    flex-direction: row;
+    background: var(--card-item-bg-color);
+  }
+
+  &__thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0px 10px 10px #bebebe);
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 116px;
+      height: 116px;
+      background-color: var(--card-item-bg-thumb);
+      border-radius: 10px;
+
+      @include abstracts.screen(xl) {
+        width: 100%;
+      }
+
+      @include abstracts.screen(md) {
+        width: 116px;
+      }
+
+      @include abstracts.screen(sm) {
+        width: 88px;
+        height: 88px;
+      }
+    }
+  }
+
+  &__content {
+    &__price {
+      color: var(--text-color);
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 145.455%;
+
+      @include abstracts.screen(md) {
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 144.444%;
+      }
+    }
+
+    &__desc {
+      color: var(--text-color);
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 150%;
+
+      @include abstracts.screen(md) {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 142.857%;
+      }
+    }
+  }
+}

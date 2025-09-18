@@ -32,27 +32,101 @@
       load("#header", "./templates/header.html");
     </script>
     <div class="container">
-      <div class="slideshow">
-        <div class="slideshow__inner">
-          <div class="slideshow__item">
+      <!-- slideshow -->
+      <section class="home__container">
+        <div class="slideshow">
+          <div class="slideshow__inner">
+            <div class="slideshow__item">
+              <a href="#!">
+                <picture>
+                  <source
+                    media="(max-width: 767.98px)"
+                    srcset="./assets/imgs/slideshow/slideshow-1-md.png"
+                  />
+                  <img
+                    src="./assets/imgs/slideshow/slideshow-1.png"
+                    alt=""
+                    class="slideshow__img"
+                  />
+                </picture>
+              </a>
+            </div>
+          </div>
+          <div class="slideshow__decor">
+            <span class="slideshow__decor__num">1</span>
+            <span class="slideshow__decor__bar"></span>
+            <span class="slideshow__decor__num">5</span>
+          </div>
+        </div>
+      </section>
+      <!-- Browse Categories -->
+      <section class="home__container">
+        <div class="home__row">
+          <h2 class="home__heading">Browse Categories</h2>
+        </div>
+        <div class="home__cate row row-cols-3 row-cols-md-1">
+          <div class="col">
             <a href="#!">
-              <picture>
-                <source media="(max-width: 767.98px)" srcset="./assets/imgs/slideshow/slideshow-1-md.png"/>
-                <img
-                  src="./assets/imgs/slideshow/slideshow-1.png"
-                  alt=""
-                  class="slideshow__img"
-                />
-              </picture>
+              <article class="card__item">
+                <div class="card__item__thumb-wrapper">
+                  <img
+                    src="./assets/imgs/card-item-1.png"
+                    alt=""
+                    class="card__item__thumb"
+                  />
+                </div>
+                <section class="card__item__content">
+                  <h3 class="card__item__content__price">$24 - $150</h3>
+                  <p class="card__item__content__desc">
+                    New sumatra mandeling coffe blend
+                  </p>
+                </section>
+              </article>
+            </a>
+          </div>
+          <div class="col">
+            <a href="#!">
+              <article class="card__item">
+                <div class="card__item__thumb-wrapper">
+                  <img
+                    src="./assets/imgs/card-item-2.png"
+                    alt=""
+                    class="card__item__thumb"
+                  />
+                </div>
+                <section class="card__item__content">
+                  <h3 class="card__item__content__price">$37 - $160</h3>
+                  <p class="card__item__content__desc">
+                    Espresso arabica and robusta beans
+                  </p>
+                </section>
+              </article>
+            </a>
+          </div>
+          <div class="col">
+            <a href="#!">
+              <article class="card__item">
+                <div class="card__item__thumb-wrapper">
+                  <img
+                    src="./assets/imgs/card-item-3.png"
+                    alt=""
+                    class="card__item__thumb"
+                  />
+                </div>
+                <section class="card__item__content">
+                  <h3 class="card__item__content__price">$32 - $160</h3>
+                  <p class="card__item__content__desc">
+                    Lavazza top class whole bean coffee blend
+                  </p>
+                </section>
+              </article>
             </a>
           </div>
         </div>
-        <div class="slideshow__decor">
-          <span class="slideshow__decor__num">1</span>
-          <span class="slideshow__decor__bar"></span>
-          <span class="slideshow__decor__num">5</span>
-        </div>
-      </div>
+      </section>
+
+      <!-- Browse Product -->
+      <section class="home__container"></section>
     </div>
   </body>
 </html>

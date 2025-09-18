@@ -1,6 +1,5 @@
 @use "../abstracts";
 .slideshow {
-  margin-top: 40px;
   position: relative;
 
   &__inner {
@@ -15,9 +14,9 @@
     flex-shrink: 0;
     padding-top: 34%;
 
-     @include abstracts.breakpoint(md) {
+    @include abstracts.screen(md) {
       padding-top: 50%;
-     }
+    }
   }
 
   &__img {
