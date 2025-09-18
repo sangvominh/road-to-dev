@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "./variable";
 
 $grid-breakpoints: (
   xxl: 1400px,
@@ -15,4 +16,12 @@ $grid-breakpoints: (
       @content;
     }
   }
+}
+
+@mixin typo($key) {
+  $style: map.get(variable.$typography, $key);
+
+  font-size: map-get($style, size);
+  font-weight: map-get($style, weight);
+  line-height: map-get($style, line-height);
 }

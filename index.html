@@ -1,30 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grocery Ecommerce</title>
     <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/png"
-      href="./assets/favicon/favicon-96x96.png"
-      sizes="96x96"
-    />
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/favicon/apple-touch-icon.png"
-    />
-    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg">
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
     <!-- Gordita Font -->
-    <link rel="stylesheet" href="./assets/Gordita-font/stylesheet.css" />
+    <link rel="stylesheet" href="./assets/Gordita-font/stylesheet.css">
     <!-- Reuse Header and Footer -->
     <script src="scripts/reuseHeaderFooter.js"></script>
     <!-- Styles -->
-    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/main.css">
   </head>
   <body>
     <header id="header" class="header"></header>
@@ -33,21 +24,14 @@
     </script>
     <div class="container">
       <!-- slideshow -->
-      <section class="home__container">
+      <div class="home__container">
         <div class="slideshow">
           <div class="slideshow__inner">
             <div class="slideshow__item">
               <a href="#!">
                 <picture>
-                  <source
-                    media="(max-width: 767.98px)"
-                    srcset="./assets/imgs/slideshow/slideshow-1-md.png"
-                  />
-                  <img
-                    src="./assets/imgs/slideshow/slideshow-1.png"
-                    alt=""
-                    class="slideshow__img"
-                  />
+                  <source media="(max-width: 767.98px)" srcset="./assets/imgs/slideshow/slideshow-1-md.png">
+                  <img src="./assets/imgs/slideshow/slideshow-1.png" alt="" class="slideshow__img">
                 </picture>
               </a>
             </div>
@@ -58,7 +42,7 @@
             <span class="slideshow__decor__num">5</span>
           </div>
         </div>
-      </section>
+      </div>
       <!-- Browse Categories -->
       <section class="home__container">
         <div class="home__row">
@@ -69,18 +53,12 @@
             <a href="#!">
               <article class="card__item">
                 <div class="card__item__thumb-wrapper">
-                  <img
-                    src="./assets/imgs/card-item-1.png"
-                    alt=""
-                    class="card__item__thumb"
-                  />
+                  <img src="./assets/imgs/card-item-1.png" alt="" class="card__item__thumb" >
                 </div>
-                <section class="card__item__content">
+                <div class="card__item__content">
                   <h3 class="card__item__content__price">$24 - $150</h3>
-                  <p class="card__item__content__desc">
-                    New sumatra mandeling coffe blend
-                  </p>
-                </section>
+                  <p class="card__item__content__desc">New sumatra mandeling coffe blend</p>
+                </div>
               </article>
             </a>
           </div>
@@ -88,18 +66,12 @@
             <a href="#!">
               <article class="card__item">
                 <div class="card__item__thumb-wrapper">
-                  <img
-                    src="./assets/imgs/card-item-2.png"
-                    alt=""
-                    class="card__item__thumb"
-                  />
+                  <img src="./assets/imgs/card-item-2.png" alt="" class="card__item__thumb" >
                 </div>
-                <section class="card__item__content">
+                <div class="card__item__content">
                   <h3 class="card__item__content__price">$37 - $160</h3>
-                  <p class="card__item__content__desc">
-                    Espresso arabica and robusta beans
-                  </p>
-                </section>
+                  <p class="card__item__content__desc">Espresso arabica and robusta beans</p>
+                </div>
               </article>
             </a>
           </div>
@@ -107,18 +79,12 @@
             <a href="#!">
               <article class="card__item">
                 <div class="card__item__thumb-wrapper">
-                  <img
-                    src="./assets/imgs/card-item-3.png"
-                    alt=""
-                    class="card__item__thumb"
-                  />
+                  <img src="./assets/imgs/card-item-3.png" alt="" class="card__item__thumb" >
                 </div>
-                <section class="card__item__content">
+                <div class="card__item__content">
                   <h3 class="card__item__content__price">$32 - $160</h3>
-                  <p class="card__item__content__desc">
-                    Lavazza top class whole bean coffee blend
-                  </p>
-                </section>
+                  <p class="card__item__content__desc">Lavazza top class whole bean coffee blend</p>
+                </div>
               </article>
             </a>
           </div>
@@ -126,7 +92,123 @@
       </section>
 
       <!-- Browse Product -->
-      <section class="home__container"></section>
+      <section class="home__container">
+        <div class="home__row">
+          <h2 class="home__heading">Browse Categories</h2>
+          <div class="home__product-filter">
+            <span class="home__product-filter__title">Filter</span>
+            <img src="./assets/icons/filter.svg" alt="" class="home__product-filter__title" >
+          </div>
+        </div>
+        <div class="home__product">
+          <div class="home__product__inner row row-cols-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-3">
+            <!-- product 1 -->
+            <div class="col">
+              <article class="product__card">
+                <div class="product__card__thumb__wrapper">
+                  <a href="#!">
+                    <img src="./assets/imgs/prod/prod-1.png" alt="" class="product__card__thumb" >
+                  </a>
+                  <button class="product__card__thumb-like-btn like-btn">
+                    <img src="./assets/icons/heart.svg" alt="" class="like-icon icon" >
+                    <img src="./assets/icons/heart-red.svg" alt="" class="like-icon-active" >
+                  </button>
+                </div>
+                <div class="product__card__info">
+                  <h3 class="product__card__info__title">
+                    <a href="#!">Coffee Beans - Espresso Arabica and Robusta Beans</a>
+                  </h3>
+                  <span class="product__card__info__brand">Lavazza</span>
+                  <div class="product__card__info__row">
+                    <div class="span product__card__info__price">$47.00</div>
+                    <div class="product__card__info__rate">
+                      <img src="./assets/icons/star.svg" alt="" class="product__card__info__rate__star" >
+                      <span class="product__card__info__rate__num">4.3</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <!-- product 2 -->
+            <div class="col">
+              <article class="product__card">
+                <div class="product__card__thumb__wrapper">
+                  <a href="#!">
+                    <img src="./assets/imgs/prod/prod-2.png" alt="" class="product__card__thumb" >
+                  </a>
+                  <button class="product__card__thumb-like-btn like-btn like-active">
+                    <img src="./assets/icons/heart.svg" alt="" class="like-icon icon" >
+                    <img src="./assets/icons/heart-red.svg" alt="" class="like-icon-active" >
+                  </button>
+                </div>
+                <div class="product__card__info">
+                  <h3 class="product__card__info__title">
+                    <a href="#!">Coffee Beans - Espresso Arabica and Robusta Beans</a>
+                  </h3>
+                  <span class="product__card__info__brand">Lavazza</span>
+                  <div class="product__card__info__row">
+                    <div class="span product__card__info__price">$53.00</div>
+                    <div class="product__card__info__rate">
+                      <img src="./assets/icons/star.svg" alt="" class="product__card__info__rate__star" >
+                      <span class="product__card__info__rate__num">3.4</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <!-- product 3 -->
+            <div class="col">
+              <article class="product__card">
+                <div class="product__card__thumb__wrapper">
+                  <a href="#!"><img src="./assets/imgs/prod/prod-3.png" alt="" class="product__card__thumb" ></a>
+                  <button class="product__card__thumb-like-btn like-btn">
+                    <img src="./assets/icons/heart.svg" alt="" class="like-icon icon" >
+                    <img src="./assets/icons/heart-red.svg" alt="" class="like-icon-active" >
+                  </button>
+                </div>
+                <div class="product__card__info">
+                  <h3 class="product__card__info__title">
+                    <a href="#!">Coffee Beans - Espresso Arabica and Robusta Beans</a>
+                  </h3>
+                  <span class="product__card__info__brand">welikecoffee</span>
+                  <div class="product__card__info__row">
+                    <div class="span product__card__info__price">$99.99</div>
+                    <div class="product__card__info__rate">
+                      <img src="./assets/icons/star.svg" alt="" class="product__card__info__rate__star" >
+                      <span class="product__card__info__rate__num">5.0</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <!-- product 4 -->
+            <div class="col">
+              <article class="product__card">
+                <div class="product__card__thumb__wrapper">
+                  <a href="#!"><img src="./assets/imgs/prod/prod-4.png" alt="" class="product__card__thumb" ></a>
+                  <button class="product__card__thumb-like-btn like-btn">
+                    <img src="./assets/icons/heart.svg" alt="" class="like-icon icon" >
+                    <img src="./assets/icons/heart-red.svg" alt="" class="like-icon-active" >
+                  </button>
+                </div>
+                <div class="product__card__info">
+                  <h3 class="product__card__info__title">
+                    <a href="#!">Coffee Beans - Espresso Arabica and Robusta Beans</a>
+                  </h3>
+                  <span class="product__card__info__brand">Lavazza</span>
+                  <div class="product__card__info__row">
+                    <div class="span product__card__info__price">$38.65</div>
+                    <div class="product__card__info__rate">
+                      <img src="./assets/icons/star.svg" alt="" class="product__card__info__rate__star" >
+                      <span class="product__card__info__rate__num">4.4</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </body>
 </html>
