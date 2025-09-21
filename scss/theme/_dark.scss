@@ -3,14 +3,16 @@
 html.dark {
   --text-color: #fff;
   --body-bg: #292e39;
-  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(9%)
-    hue-rotate(253deg) brightness(104%) contrast(104%);
+  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(9%) hue-rotate(253deg) brightness(104%)
+    contrast(104%);
   // header
   --header-bg-color: #171c28;
   // logo
   --logo-name-color: #fff;
   // nav
   --nav-link-color: #fff;
+  // button
+  --filter-btn-bg-color: #171c28;
   // header-action
   --header-action-group-bg-color: #292e39;
   --header-action-separate-color: #ededf6;
@@ -19,8 +21,8 @@ html.dark {
   // dropdown
   --dropdown-bg-color: #292e39;
   --dropdown-box-shadow-color: rgba(23, 28, 40, 0.4);
-  --dropdown-icon-filter: brightness(0) saturate(100%) invert(12%) sepia(3%)
-    saturate(4904%) hue-rotate(184deg) brightness(94%) contrast(83%);
+  --dropdown-icon-filter: brightness(0) saturate(100%) invert(12%) sepia(3%) saturate(4904%) hue-rotate(184deg)
+    brightness(94%) contrast(83%);
   --dropdown-menu-border-right-color: #171c28;
   --dropdown-menu-title-text-color: #b9babe;
   --dropdown-menu-item-link-color: #b9babe;
@@ -36,7 +38,12 @@ html.dark {
   .card__item__thumb {
     filter: none;
   }
-    // card prod
-  --card-prod-bg-color: #171C28;
-  
+  // card prod
+  --card-prod-bg-color: #171c28;
+  // filter
+  --filter-content-bg-color: #292e39;
+  .filter__content {
+    filter: drop-shadow(0 40px 90px rgba(0, 0, 0, 0.4));
+  }
+  --filter-group-bg-color: #171C28;
 }

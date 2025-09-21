@@ -65,6 +65,10 @@
     @include abstracts.screen(md) {
       height: calc(100% - 136px);
     }
+
+    @include abstracts.screen(md) {
+      height: calc(100% - 180px);
+    }
   }
 
   &__item {
@@ -135,10 +139,6 @@
       background: rgba(0, 0, 0, 0.5);
       z-index: 10;
     }
-  }
-
-  &.show {
-    box-shadow: 0 40px 90px 20px rgba(200, 200, 200, 0.4);
   }
 
   &.hide ~ .nav__overlay {

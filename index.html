@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grocery Ecommerce</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg">
-    <link rel="shortcut icon" href="./assets/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
     <!-- Gordita Font -->
-    <link rel="stylesheet" href="./assets/Gordita-font/stylesheet.css">
+    <link rel="stylesheet" href="./assets/Gordita-font/stylesheet.css" />
     <!-- Reuse Header and Footer -->
     <script src="scripts/reuseHeaderFooter.js"></script>
     <!-- Styles -->
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
     <header id="header" class="header"></header>
@@ -30,8 +30,8 @@
             <div class="slideshow__item">
               <a href="#!">
                 <picture>
-                  <source media="(max-width: 767.98px)" srcset="./assets/imgs/slideshow/slideshow-1-md.png">
-                  <img src="./assets/imgs/slideshow/slideshow-1.png" alt="" class="slideshow__img">
+                  <source media="(max-width: 767.98px)" srcset="./assets/imgs/slideshow/slideshow-1-md.png" />
+                  <img src="./assets/imgs/slideshow/slideshow-1.png" alt="" class="slideshow__img" />
                 </picture>
               </a>
             </div>
@@ -49,11 +49,12 @@
           <h2 class="home__heading">Browse Categories</h2>
         </div>
         <div class="home__cate row row-cols-3 row-cols-md-1">
+          <!-- col 1 -->
           <div class="col">
             <a href="#!">
               <article class="card__item">
                 <div class="card__item__thumb-wrapper">
-                  <img src="./assets/imgs/card-item-1.png" alt="" class="card__item__thumb" >
+                  <img src="./assets/imgs/card-item-1.png" alt="" class="card__item__thumb" />
                 </div>
                 <div class="card__item__content">
                   <h3 class="card__item__content__price">$24 - $150</h3>
@@ -62,11 +63,12 @@
               </article>
             </a>
           </div>
+          <!-- col 2 -->
           <div class="col">
             <a href="#!">
               <article class="card__item">
                 <div class="card__item__thumb-wrapper">
-                  <img src="./assets/imgs/card-item-2.png" alt="" class="card__item__thumb" >
+                  <img src="./assets/imgs/card-item-2.png" alt="" class="card__item__thumb" />
                 </div>
                 <div class="card__item__content">
                   <h3 class="card__item__content__price">$37 - $160</h3>
@@ -75,11 +77,12 @@
               </article>
             </a>
           </div>
+          <!-- col 3 -->
           <div class="col">
             <a href="#!">
               <article class="card__item">
                 <div class="card__item__thumb-wrapper">
-                  <img src="./assets/imgs/card-item-3.png" alt="" class="card__item__thumb" >
+                  <img src="./assets/imgs/card-item-3.png" alt="" class="card__item__thumb" />
                 </div>
                 <div class="card__item__content">
                   <h3 class="card__item__content__price">$32 - $160</h3>
@@ -93,11 +96,114 @@
 
       <!-- Browse Product -->
       <section class="home__container">
-        <div class="home__row">
+        <div class="home__row relative">
           <h2 class="home__heading">Browse Categories</h2>
-          <div class="home__product-filter">
-            <span class="home__product-filter__title">Filter</span>
-            <img src="./assets/icons/filter.svg" alt="" class="home__product-filter__title" >
+          <div class="filter__wrapper">
+            <button type="button" class="js-toggle filter-btn" toggle-target="#filter-home">
+              <span class="filter-btn__title">Filter</span>
+              <img src="./assets/icons/filter.svg" alt="" class="filter-btn__icon icon" />
+            </button>
+            <form id="filter-home" class="filter__content hide">
+              <!-- heading -->
+              <h3 class="filter__heading">Filter</h3>
+              <!-- content -->
+              <div class="row row-cols-3 row-cols-lg-2 row-cols-md-1">
+                <!-- col 1 -->
+                <div class="col">
+                  <div class="filter__item__wrapper filter__item__wrapper__separate">
+                    <div class="filter__item__title">Price</div>
+                    <div class="filter__item__group">
+                      <div class="filter__item__range__bar"></div>
+                    </div>
+                    <div class="filter__item__group">
+                      <div class="filter__item__minmax">
+                        <div class="filter__item__label">Minimum</div>
+                        <div class="filter__item__input-wrapper filter__item__input-wrapper--small">
+                          <input type="" class="filter__item__input text-color" value="$30.00" />
+                        </div>
+                      </div>
+                      <div class="filter__item__minmax">
+                        <div class="filter__item__label">Maximum</div>
+                        <div class="filter__item__input-wrapper filter__item__input-wrapper--small">
+                          <input type="" class="filter__item__input" value="$100.00" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- col 2 -->
+                <div class="col">
+                  <div class="filter__item__wrapper filter__item__wrapper__separate">
+                    <div class="filter__item__title">Size/Weight</div>
+                    <div class="filter__item__group">
+                      <div class="filter__item__input-wrapper">
+                        <select id="" name="" class="filter__item__select">
+                          <option value="">500</option>
+                          <option value="">1000</option>
+                          <option value="">1500</option>
+                          <option value="">2000</option>
+                        </select>
+                        <div class="filter__item__input-wrapper__separate"></div>
+                        <select id="" name="" class="filter__item__select">
+                          <option value="">gram</option>
+                          <option value="">kilogram</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="filter__item__group">
+                      <div class="filter__item__group--bg">
+                        <label for="small" class="filter__item__label--size">Small</label>
+                        <input type="checkbox" name="size-small" id="small" class="filter__item__checked" hidden />
+                      </div>
+                      <div class="filter__item__group--bg">
+                        <label for="medium" class="filter__item__label--size">Medium</label>
+                        <input type="checkbox" name="size-medium" id="medium" class="filter__item__checked" hidden />
+                      </div>
+                      <div class="filter__item__group--bg">
+                        <label for="large" class="filter__item__label--size">Large</label>
+                        <input type="checkbox" name="size-large" id="large" class="filter__item__checked" hidden />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- col 3 -->
+                <div class="col">
+                  <div class="filter__item__wrapper">
+                    <div class="filter__item__title">Brand</div>
+                    <div class="filter__item__group">
+                      <div class="filter__item__input-wrapper">
+                        <input type="text" placeholder="Search brand name" class="filter__item__input filter__item__search" />
+                      </div>
+                    </div>
+                    <div class="filter__item__group">
+                      <div class="filter__item__group--bg">
+                        <label for="lavazza" class="filter__item__label--size">Lavazza</label>
+                        <input type="checkbox" name="size-lavazza" id="lavazza" class="filter__item__checked" hidden />
+                      </div>
+                      <div class="filter__item__group--bg">
+                        <label for="Nescafe" class="filter__item__label--size">Nescafe</label>
+                        <input type="checkbox" name="size-Nescafe" id="Nescafe" class="filter__item__checked" hidden />
+                      </div>
+                      <div class="filter__item__group--bg">
+                        <label for="Starbucks" class="filter__item__label--size">Starbucks</label>
+                        <input
+                          type="checkbox"
+                          name="size-Starbucks"
+                          id="Starbucks"
+                          class="filter__item__checked"
+                          hidden
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- button -->
+              <div class="filter__btn">
+                <button type="button" class="btn-secondary filter__btn__secondary  js-toggle" toggle-target="#filter-home">Cancel</button>
+                <button type="button" class="btn btn-primary btn--radius-sm filter__btn__primary js-toggle" toggle-target="#filter-home">Show Result</button>
+              </div>
+            </form>
           </div>
         </div>
         <div class="home__product">
@@ -107,11 +213,11 @@
               <article class="product__card">
                 <div class="product__card__thumb__wrapper">
                   <a href="#!">
-                    <img src="./assets/imgs/prod/prod-1.png" alt="" class="product__card__thumb" >
+                    <img src="./assets/imgs/prod/prod-1.png" alt="" class="product__card__thumb" />
                   </a>
                   <button class="product__card__thumb-like-btn like-btn">
-                    <img src="./assets/icons/heart.svg" alt="" class="like-icon icon" >
-                    <img src="./assets/icons/heart-red.svg" alt="" class="like-icon-active" >
+                    <img src="./assets/icons/heart.svg" alt="" class="like-icon icon" />
+                    <img src="./assets/icons/heart-red.svg" alt="" class="like-icon-active" />
                   </button>
                 </div>
                 <div class="product__card__info">
@@ -122,7 +228,7 @@
                   <div class="product__card__info__row">
                     <div class="span product__card__info__price">$47.00</div>
                     <div class="product__card__info__rate">
-                      <img src="./assets/icons/star.svg" alt="" class="product__card__info__rate__star" >
+                      <img src="./assets/icons/star.svg" alt="" class="product__card__info__rate__star" />
                       <span class="product__card__info__rate__num">4.3</span>
                     </div>
                   </div>
@@ -134,11 +240,11 @@
               <article class="product__card">
                 <div class="product__card__thumb__wrapper">
                   <a href="#!">
-                    <img src="./assets/imgs/prod/prod-2.png" alt="" class="product__card__thumb" >
+                    <img src="./assets/imgs/prod/prod-2.png" alt="" class="product__card__thumb" />
                   </a>
                   <button class="product__card__thumb-like-btn like-btn like-active">
-                    <img src="./assets/icons/heart.svg" alt="" class="like-icon icon" >
-                    <img src="./assets/icons/heart-red.svg" alt="" class="like-icon-active" >
+                    <img src="./assets/icons/heart.svg" alt="" class="like-icon icon" />
+                    <img src="./assets/icons/heart-red.svg" alt="" class="like-icon-active" />
                   </button>
                 </div>
                 <div class="product__card__info">
@@ -149,7 +255,7 @@
                   <div class="product__card__info__row">
                     <div class="span product__card__info__price">$53.00</div>
                     <div class="product__card__info__rate">
-                      <img src="./assets/icons/star.svg" alt="" class="product__card__info__rate__star" >
+                      <img src="./assets/icons/star.svg" alt="" class="product__card__info__rate__star" />
                       <span class="product__card__info__rate__num">3.4</span>
                     </div>
                   </div>
@@ -160,10 +266,10 @@
             <div class="col">
               <article class="product__card">
                 <div class="product__card__thumb__wrapper">
-                  <a href="#!"><img src="./assets/imgs/prod/prod-3.png" alt="" class="product__card__thumb" ></a>
+                  <a href="#!"><img src="./assets/imgs/prod/prod-3.png" alt="" class="product__card__thumb" /></a>
                   <button class="product__card__thumb-like-btn like-btn">
-                    <img src="./assets/icons/heart.svg" alt="" class="like-icon icon" >
-                    <img src="./assets/icons/heart-red.svg" alt="" class="like-icon-active" >
+                    <img src="./assets/icons/heart.svg" alt="" class="like-icon icon" />
+                    <img src="./assets/icons/heart-red.svg" alt="" class="like-icon-active" />
                   </button>
                 </div>
                 <div class="product__card__info">
@@ -174,7 +280,7 @@
                   <div class="product__card__info__row">
                     <div class="span product__card__info__price">$99.99</div>
                     <div class="product__card__info__rate">
-                      <img src="./assets/icons/star.svg" alt="" class="product__card__info__rate__star" >
+                      <img src="./assets/icons/star.svg" alt="" class="product__card__info__rate__star" />
                       <span class="product__card__info__rate__num">5.0</span>
                     </div>
                   </div>
@@ -185,10 +291,10 @@
             <div class="col">
               <article class="product__card">
                 <div class="product__card__thumb__wrapper">
-                  <a href="#!"><img src="./assets/imgs/prod/prod-4.png" alt="" class="product__card__thumb" ></a>
+                  <a href="#!"><img src="./assets/imgs/prod/prod-4.png" alt="" class="product__card__thumb" /></a>
                   <button class="product__card__thumb-like-btn like-btn">
-                    <img src="./assets/icons/heart.svg" alt="" class="like-icon icon" >
-                    <img src="./assets/icons/heart-red.svg" alt="" class="like-icon-active" >
+                    <img src="./assets/icons/heart.svg" alt="" class="like-icon icon" />
+                    <img src="./assets/icons/heart-red.svg" alt="" class="like-icon-active" />
                   </button>
                 </div>
                 <div class="product__card__info">
@@ -199,7 +305,7 @@
                   <div class="product__card__info__row">
                     <div class="span product__card__info__price">$38.65</div>
                     <div class="product__card__info__rate">
-                      <img src="./assets/icons/star.svg" alt="" class="product__card__info__rate__star" >
+                      <img src="./assets/icons/star.svg" alt="" class="product__card__info__rate__star" />
                       <span class="product__card__info__rate__num">4.4</span>
                     </div>
                   </div>
