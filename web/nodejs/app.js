@@ -1,4 +1,6 @@
 const express = require("express");
+const morgan = require("morgan");
+
 const app = express();
 app.listen(3000);
 
@@ -6,19 +8,12 @@ app.listen(3000);
 const ejs = require("ejs");
 app.set("view engine", "ejs");
 
-// middleware
-app.use((req, res, next) => {
-  console.log("first middleware");
-  next();
-});
+// morgan & static file
+app.use(morgan("dev"));
+app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   res.render("index.ejs", { title: "home" });
-});
-
-app.use((req, res, next) => {
-  console.log("second middleware");
-  next();
 });
 
 app.get("/about-me", (req, res) => {
