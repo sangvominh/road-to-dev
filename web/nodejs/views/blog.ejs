@@ -7,20 +7,19 @@
   </head>
   <body>
     <h1>day la cac blog trong db</h1>
+    <a href="/blog/create-blog">create new blog</a>
     <ul>
-      <% if(blog.length > 0) { %>
-        <% blog.forEach((blog) => { %>
-          <li>
-           <a href="/blog/<%= blog.id %>">
-              <h3><%= blog.title %></h3>
-              <p><%= blog.body %></p>
-           </a>
-          </li>
-        <% }) %>
-      <% } else { %>
-        <li>
-          <h3>khong co blog nao</h3>
-        </li>
+      <% if(blog.length > 0) { %> <% blog.forEach((blog) => { %>
+      <li>
+        <a href="/blog/<%= blog.id %>">
+          <h3><%= blog.title %></h3>
+          <p><%= blog.body %></p>
+        </a>
+      </li>
+      <% }) %> <% } else { %>
+      <li>
+        <h3>khong co blog nao</h3>
+      </li>
       <% } %>
     </ul>
   </body>

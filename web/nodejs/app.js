@@ -1,9 +1,9 @@
 const express = require("express");
+const app = express();
 const morgan = require("morgan");
 const mongoose = require("mongoose");
-const Blog = require("./models/blog");
+const blogRouter = require("./routes/blogRoute");
 
-const app = express();
 // ejs
 const ejs = require("ejs");
 const { result } = require("lodash");
@@ -27,37 +27,7 @@ app.get("/", (req, res) => {
   res.render("index.ejs", { title: "home" });
 });
 
-app.get("/blog", (req, res) => {
-  Blog.find()
-    .then((result) => res.render("blog.ejs", { title: "All blog", blog: result }))
-    .catch((err) => console.log("error in get blog", err));
-});
-
-app.post("/blog", (req, res) => {
-  const blog = new Blog(req.body);
-  blog
-    .save()
-    .then((result) => res.redirect("/blog"))
-    .catch((err) => console.log("error in create blog", err));
-});
-
-app.get("/blog/:id", (req, res) => {
-  const id = req.params.id;
-  Blog.findById(id)
-    .then((result) => res.render("blog-detail.ejs", { title: "Blog Detail", blog: result }))
-    .catch((err) => console.log("error in get blog detail", err));
-});
-
-app.delete("/blog/:id", (req, res) => {
-  const id = req.params.id;
-  Blog.findByIdAndDelete(id)
-    .then((result) => res.json({ redirect: "/blog" }))
-    .catch((err) => console.log("error in delete blog", err));
-});
-
-app.get("/create-blog", (req, res) => {
-  res.render("create-blog.ejs", { title: "create blog" });
-});
+app.use("/blog", blogRouter);
 
 app.get("/about-me", (req, res) => {
   res.render("about.ejs", { title: "about-me" });
