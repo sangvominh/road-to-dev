@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document | <%- title %></title>
+  </head>
+  <body>
+    <h1>day la cac blog trong db</h1>
+    <ul>
+      <% if(blog.length > 0) { %>
+        <% blog.forEach((blog) => { %>
+          <li>
+           <a href="/blog/<%= blog.id %>">
+              <h3><%= blog.title %></h3>
+              <p><%= blog.body %></p>
+           </a>
+          </li>
+        <% }) %>
+      <% } else { %>
+        <li>
+          <h3>khong co blog nao</h3>
+        </li>
+      <% } %>
+    </ul>
+  </body>
+</html>
