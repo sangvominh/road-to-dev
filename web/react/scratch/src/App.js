@@ -1,38 +1,39 @@
-import "./App.css";
 import React, { useState } from "react";
 import Title from "./components/Title";
 import Modal from "./components/Modal";
 import EvenList from "./components/EvenList";
+import NewEventForm from "./components/NewEventForm";
 
 function App() {
-  const [evenList, setEvenList] = useState([
-    { title: "hai ba bon", id: 1 },
-    { title: "mot hai ba", id: 2 },
-    { title: "hai ba bon", id: 3 },
-    { title: "mot hai ba", id: 4 },
-    { title: "hai ba bon", id: 5 },
-  ]);
+  const [evenList, setEventList] = useState([]);
   const [showHideEvenList, setShowHideEvenList] = useState(true);
   const [showHideModal, setShowHideModal] = useState(false);
 
   function handelDeleteItemEvenList(id) {
-    // setA(
-    //   a.filter((item) => {
+    // setEventList(
+    //   evenList.filter((item) => {
     //     return id !== item.id;
     //   })
     // );
 
     // recommend
-    setEvenList((prevA) =>
+    setEventList((prevA) =>
       prevA.filter((item) => {
         return id !== item.id;
       })
     );
   }
 
-  function handleModal() {
+  function showOrHideModal() {
     setShowHideModal(!showHideModal);
   }
+
+  const addEvent = (event) => {
+    setEventList((prevEvent) => {
+      return [...prevEvent, event];
+    });
+    showOrHideModal();
+  };
 
   return (
     <>
@@ -42,11 +43,10 @@ function App() {
       {showHideEvenList && <button onClick={() => setShowHideEvenList(!showHideEvenList)}>hide</button>}
       {showHideEvenList && <EvenList evenList={evenList} handelDeleteItemEvenList={handelDeleteItemEvenList} />}
 
-      <button onClick={handleModal}>show modal</button>
+      <button onClick={showOrHideModal}>Create event</button>
       {showHideModal && (
-        <Modal handleClose={handleModal}>
-          <h2>this is modal</h2>
-          <p>this is content of modal aaaaaaaaaaaa</p>
+        <Modal handleClose={showOrHideModal} highLight={true}>
+          <NewEventForm addEvent={addEvent} />
         </Modal>
       )}
     </>
