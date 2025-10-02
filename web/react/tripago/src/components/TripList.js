@@ -1,24 +1,17 @@
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
+import { useFetch } from '../hook/useFetch'
 
 export default function TripList() {
-  const [trips, setTrips] = useState([]);
   const [url, setUrl] = useState("http://localhost:3000/trips");
-
-  const fetchTrips = useCallback(async () => {
-    const response = await fetch(url);
-    const json = await response.json();
-    setTrips(json);
-  }, [url]);
-
-  useEffect(() => {
-    fetchTrips();
-  }, [url, fetchTrips]);
-
+  const {data: trips, isPending, error} = useFetch(url)
+  
   return (
     <div className="trip-list">
       <h2>Trip List</h2>
+      {isPending && <p>Loading trips.........</p>}
+      {error && <p>{error}</p>}
       <ul>
-        {trips.map((trip) => (
+        {trips && trips.map((trip) => (
           <li key={trip.id}>
             <h2>{trip.title}</h2>
             <p>{trip.price}</p>
